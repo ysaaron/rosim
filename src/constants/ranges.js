@@ -1,9 +1,15 @@
 import { range } from 'lodash';
 
-import { SECOND, THIRD, TRANSCENDENT_SECOND } from './classes/classNames';
+import {
+  FIRST,
+  SECOND,
+  THIRD,
+  TRANSCENDENT_SECOND,
+} from './classes/classNames';
 import { getJobType } from './classes';
 
 const jobLevelMap = {
+  [FIRST]: 50,
   [SECOND]: 50,
   [TRANSCENDENT_SECOND]: 70,
   [THIRD]: 60,

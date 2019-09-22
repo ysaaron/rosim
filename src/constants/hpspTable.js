@@ -93,6 +93,7 @@ export const secondSpTable = [
     job: [
       classes.SWORDMAN,
       classes.HIGH_SWORDMAN,
+      classes.ARCHER,
       classes.ACOLYTE,
       classes.HIGH_ACOLYTE,
       classes.THIEF,

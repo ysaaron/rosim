@@ -1,4 +1,4 @@
-import { find, floor, mapValues, range } from 'lodash';
+import { find, floor, last, mapValues, range } from 'lodash';
 import { reduce } from 'lodash/fp';
 
 import jobStatBonus, { statsMap } from '../constants/bonus';
@@ -49,7 +49,7 @@ export const getRemainingStatsPoint = (level, stats, job) => {
 };
 
 export const getJobBonusStats = (jobLevel, job) => {
-  const jobBonus = find(jobStatBonus, ['key', job[1]]);
+  const jobBonus = find(jobStatBonus, ['key', last(job)]);
   return jobBonus.bonus
     .filter(r => r[0] <= jobLevel)
     .reduce((prev, next) => {

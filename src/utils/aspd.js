@@ -1,4 +1,4 @@
-import { find, floor } from 'lodash';
+import { find, floor, last } from 'lodash';
 
 import aspdTable from '../constants/aspdTable';
 import { additionalEquipModTable } from '../constants/aspdAdditional';
@@ -47,7 +47,7 @@ export default (job, agi, dex, aspd) => {
   } = aspd;
   const { weapons, shieldAspd, lefthand = [] } = find(aspdTable, [
     'job',
-    job[1],
+    last(job),
   ]);
   const { baseAspd } = find(weapons, ['id', weaponId]);
 

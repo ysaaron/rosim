@@ -13,6 +13,7 @@ import About from './About';
 import AppFooter from './Layouts/AppFooter';
 import AppHeader from './Layouts/AppHeader';
 import Simulator from './Simulator';
+import SkillSimulator from './SkillSimulator';
 
 const { Content } = Layout;
 
@@ -48,6 +49,7 @@ function App() {
             <AppContent>
               <Route exact path="/" component={Simulator} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/skill" component={SkillSimulator} />
             </AppContent>
             <AppFooter />
           </Layout>

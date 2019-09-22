@@ -1,5 +1,5 @@
 import { compose, includes, prop } from 'lodash/fp';
-import { find, floor, range, round } from 'lodash';
+import { find, floor, last, range, round } from 'lodash';
 
 import { SECOND, THIRD } from '../constants/classes/classNames';
 import { getJobType } from '../constants/classes';
@@ -14,7 +14,7 @@ const findTable = (table, job) =>
   find(
     table,
     compose(
-      includes(job[1]),
+      includes(last(job)),
       prop('job')
     )
   );

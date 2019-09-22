@@ -1,6 +1,6 @@
 import React from 'react';
 import { Checkbox, Col, InputNumber, Popover, Radio, Row, Select } from 'antd';
-import { find } from 'lodash';
+import { find, last } from 'lodash';
 
 import allWeapons from '../constants/weapons';
 import aspdTable from '../constants/aspdTable';
@@ -31,7 +31,7 @@ const additiionalModOptions = [
 const useAspdSettingStore = () => {
   const [{ job, aspd }] = useStoreContext();
 
-  const { weapons, lefthand = [] } = find(aspdTable, ['job', job[1]]);
+  const { weapons, lefthand = [] } = find(aspdTable, ['job', last(job)]);
 
   return {
     aspd,

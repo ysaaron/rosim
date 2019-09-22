@@ -1,3 +1,4 @@
+export const FIRST = 'FIRST';
 export const SECOND = 'SECOND';
 export const TRANSCENDENT_SECOND = 'TRANSCENDENT_SECOND';
 export const THIRD = 'THIRD';

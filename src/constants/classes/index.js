@@ -10,9 +10,14 @@ import thief from './thief';
 
 const classes = [swordman, mage, archer, merchant, thief, acolyte];
 
-export const getJob = ([firstClass, secondClass]) => {
-  const { children } = find(classes, ['value', firstClass]);
-  return find(children, ['value', secondClass]);
+export const getJob = ([firstClass, secondClass, thirdClass]) => {
+  const firstClassJob = find(classes, ['value', firstClass]);
+  const secondClassJob =
+    secondClass && find(firstClassJob.children, ['value', secondClass]);
+  const thirdClassJob =
+    thirdClass && find(secondClassJob.children, ['value', thirdClass]);
+
+  return thirdClassJob || secondClassJob || firstClassJob;
 };
 
 export const getJobName = compose(

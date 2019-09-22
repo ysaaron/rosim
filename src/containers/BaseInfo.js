@@ -89,10 +89,12 @@ function BaseInfo() {
         <Col span={10}>
           <Label>Job</Label>
           <Cascader
+            style={{ width: 250 }}
             options={classes}
             value={job}
             onChange={setJob}
             allowClear={false}
+            changeOnSelect
           />
         </Col>
       </Row>

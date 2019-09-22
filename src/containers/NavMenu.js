@@ -54,6 +54,7 @@ function NavMenu({ location, history, mode }) {
         }}
       >
         <RoSimMenuItem key="/">模擬器</RoSimMenuItem>
+        <RoSimMenuItem key="/skill">技能</RoSimMenuItem>
         <RoSimMenuItem key="/about">關於</RoSimMenuItem>
       </RoSimMenu>
       <SaveLoad />
